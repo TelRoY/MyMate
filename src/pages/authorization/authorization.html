@@ -8,24 +8,19 @@
       </div>
 
       <div class="main">
-        <form action="" class="login">
-          <label for="login">Логин</label>
-          <input
-            type="text"
-            id="login"
-            name="login"
-            placeholder="Введите логин или email"
-          />
-        </form>
-        <form action="" class="password">
-          <label for="password">Пароль</label>
-          <input
-            type="text"
-            id="password"
-            name="password"
-            placeholder="Введите пароль"
-          />
-        </form>
+
+        {{> forms/Form
+        id="login"
+        label="Логин"
+        placeholder="Введите логин или email"
+        }}
+        
+        {{> forms/Form
+        id="password"
+        label="Пароль"
+        placeholder="Введите пароль"
+        }}
+        
         <div class="login-buttons">
           {{> buttons/Button 
             text="Авторизация" 
